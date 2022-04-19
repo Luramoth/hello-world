@@ -1,10 +1,3 @@
-; ----------------------------------------------------------------------------------------
-; Writes "Hello, World" to the console using only system calls. Runs on 64-bit Linux only.
-; To assemble and run:
-;
-;     nasm -felf64 hello.asm && ld hello.o && ./a.out
-; ----------------------------------------------------------------------------------------
-
           global    _start
 
           section   .text
@@ -18,4 +11,4 @@ _start:   mov       rax, 1                  ; system call for write
           syscall                           ; invoke operating system to exit
 
           section   .data
-message:  db        "x86_64 assembly, literally only did this just for fun", 10      ; note the newline at the end
+message:  db        "x86_64 assembly, literally only did this just for fun", 10
